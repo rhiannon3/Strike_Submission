@@ -14,6 +14,9 @@
 		027566571D8406F20058CA54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027566551D8406F20058CA54 /* LaunchScreen.storyboard */; };
 		027566621D8406F20058CA54 /* StrikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027566611D8406F20058CA54 /* StrikeTests.swift */; };
 		0275666D1D8406F20058CA54 /* StrikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0275666C1D8406F20058CA54 /* StrikeUITests.swift */; };
+		028002651D915067002EEDC2 /* ViewPlayerQty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028002641D915067002EEDC2 /* ViewPlayerQty.swift */; };
+		028002671D91514E002EEDC2 /* ViewPlayerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028002661D91514E002EEDC2 /* ViewPlayerName.swift */; };
+		028002691D918FC2002EEDC2 /* ViewGameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028002681D918FC2002EEDC2 /* ViewGameCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		027566681D8406F20058CA54 /* StrikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0275666C1D8406F20058CA54 /* StrikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeUITests.swift; sourceTree = "<group>"; };
 		0275666E1D8406F20058CA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		028002641D915067002EEDC2 /* ViewPlayerQty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewPlayerQty.swift; path = ../ViewPlayerQty.swift; sourceTree = "<group>"; };
+		028002661D91514E002EEDC2 /* ViewPlayerName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPlayerName.swift; sourceTree = "<group>"; };
+		028002681D918FC2002EEDC2 /* ViewGameCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,15 @@
 		0275664B1D8406F20058CA54 /* Strike */ = {
 			isa = PBXGroup;
 			children = (
-				0275664C1D8406F20058CA54 /* AppDelegate.swift */,
+				028002641D915067002EEDC2 /* ViewPlayerQty.swift */,
+				028002661D91514E002EEDC2 /* ViewPlayerName.swift */,
 				0275664E1D8406F20058CA54 /* ViewController.swift */,
+				028002681D918FC2002EEDC2 /* ViewGameCalculator.swift */,
 				027566501D8406F20058CA54 /* Main.storyboard */,
 				027566531D8406F20058CA54 /* Assets.xcassets */,
 				027566551D8406F20058CA54 /* LaunchScreen.storyboard */,
 				027566581D8406F20058CA54 /* Info.plist */,
+				0275664C1D8406F20058CA54 /* AppDelegate.swift */,
 			);
 			path = Strike;
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028002691D918FC2002EEDC2 /* ViewGameCalculator.swift in Sources */,
+				028002671D91514E002EEDC2 /* ViewPlayerName.swift in Sources */,
 				0275664F1D8406F20058CA54 /* ViewController.swift in Sources */,
 				0275664D1D8406F20058CA54 /* AppDelegate.swift in Sources */,
+				028002651D915067002EEDC2 /* ViewPlayerQty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
