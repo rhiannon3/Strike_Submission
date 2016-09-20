@@ -484,6 +484,7 @@
 				027566731D8406F20058CA54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		027566741D8406F20058CA54 /* Build configuration list for PBXNativeTarget "StrikeTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +493,7 @@
 				027566761D8406F20058CA54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		027566771D8406F20058CA54 /* Build configuration list for PBXNativeTarget "StrikeUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +502,7 @@
 				027566791D8406F20058CA54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
