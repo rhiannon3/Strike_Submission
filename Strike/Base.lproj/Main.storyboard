@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bowling Score Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ii-q2-7XV">
@@ -95,7 +95,7 @@
                         <viewControllerLayoutGuide type="bottom" id="q97-iQ-gfX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2mI-cq-YUD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bowling Score Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEq-tT-9D1">
@@ -302,6 +302,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XvV-yl-vSh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uUB-od-vyG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Player Names:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkK-bd-X8G">
@@ -395,6 +396,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HzF-I1-07G"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VFj-oH-tJI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bowling-pins" translatesAutoresizingMaskIntoConstraints="NO" id="T2S-Tz-pfK">
@@ -428,7 +430,7 @@
         <image name="bowling-pins" width="6666" height="3750"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Zpt-zi-pWx"/>
         <segue reference="Y1i-cV-iaV"/>
-        <segue reference="v4U-2S-18Z"/>
     </inferredMetricsTieBreakers>
 </document>
