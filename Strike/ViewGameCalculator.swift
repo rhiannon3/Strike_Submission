@@ -12,27 +12,34 @@ import UIKit
 class ViewGameCalculator: UIViewController {
     
     var ArrayPlayerNames: [UITextField] = []
-    var YFloatPoint = CGFloat(215)
+    var YFloatPoint = CGFloat(20)
     var userInput = String()
+    var playerCount = 1
     
     override func viewDidLoad() {
-        
-        for textField in ArrayPlayerNames {
-            print(textField.text)
-            userInput = textField.text!
-            CreateLabel()
-            YFloatPoint += 28
-        }
+        CreatePlayerLabels()
         
     }
     
-    func CreateLabel() {
-        
-        let label = UILabel(frame: CGRectMake(0,0,110,21))
-        label.center = CGPointMake(70, YFloatPoint)
-        label.textAlignment = NSTextAlignment.Right
+    func CreatePlayerLabels(){
+        for textField in ArrayPlayerNames {
+            userInput = textField.text!
+            if userInput == "" {
+                userInput = "Player \(playerCount)"
+            }
+            playerCount += 1
+            YFloatPoint += 70
+          CreateLabel()
+            
+        }
+    }
+    
+  func CreateLabel() {
+    let label = UILabel(frame: CGRect(x: 0,y: 0,width: 110, height: 21))
+    label.center = CGPoint(x: 50, y: YFloatPoint)
+        label.textAlignment = NSTextAlignment.right
         label.text = "\(userInput):"
-        label.textColor = UIColor.redColor()
+        label.textColor = UIColor.red
         self.view.addSubview(label)
     }
     

@@ -12,8 +12,6 @@
 		027566521D8406F20058CA54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027566501D8406F20058CA54 /* Main.storyboard */; };
 		027566541D8406F20058CA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027566531D8406F20058CA54 /* Assets.xcassets */; };
 		027566571D8406F20058CA54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027566551D8406F20058CA54 /* LaunchScreen.storyboard */; };
-		027566621D8406F20058CA54 /* StrikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027566611D8406F20058CA54 /* StrikeTests.swift */; };
-		0275666D1D8406F20058CA54 /* StrikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0275666C1D8406F20058CA54 /* StrikeUITests.swift */; };
 		028002651D915067002EEDC2 /* ViewPlayerQty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028002641D915067002EEDC2 /* ViewPlayerQty.swift */; };
 		028002671D91514E002EEDC2 /* ViewPlayerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028002661D91514E002EEDC2 /* ViewPlayerName.swift */; };
 		028002691D918FC2002EEDC2 /* ViewGameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028002681D918FC2002EEDC2 /* ViewGameCalculator.swift */; };
@@ -45,11 +43,7 @@
 		027566561D8406F20058CA54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027566581D8406F20058CA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0275665D1D8406F20058CA54 /* StrikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		027566611D8406F20058CA54 /* StrikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeTests.swift; sourceTree = "<group>"; };
-		027566631D8406F20058CA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027566681D8406F20058CA54 /* StrikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0275666C1D8406F20058CA54 /* StrikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeUITests.swift; sourceTree = "<group>"; };
-		0275666E1D8406F20058CA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028002641D915067002EEDC2 /* ViewPlayerQty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewPlayerQty.swift; path = ../ViewPlayerQty.swift; sourceTree = "<group>"; };
 		028002661D91514E002EEDC2 /* ViewPlayerName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPlayerName.swift; sourceTree = "<group>"; };
 		028002681D918FC2002EEDC2 /* ViewGameCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameCalculator.swift; sourceTree = "<group>"; };
@@ -84,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				0275664B1D8406F20058CA54 /* Strike */,
-				027566601D8406F20058CA54 /* StrikeTests */,
-				0275666B1D8406F20058CA54 /* StrikeUITests */,
 				0275664A1D8406F20058CA54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,9 +95,9 @@
 		0275664B1D8406F20058CA54 /* Strike */ = {
 			isa = PBXGroup;
 			children = (
+				0275664E1D8406F20058CA54 /* ViewController.swift */,
 				028002641D915067002EEDC2 /* ViewPlayerQty.swift */,
 				028002661D91514E002EEDC2 /* ViewPlayerName.swift */,
-				0275664E1D8406F20058CA54 /* ViewController.swift */,
 				028002681D918FC2002EEDC2 /* ViewGameCalculator.swift */,
 				027566501D8406F20058CA54 /* Main.storyboard */,
 				027566531D8406F20058CA54 /* Assets.xcassets */,
@@ -114,24 +106,6 @@
 				0275664C1D8406F20058CA54 /* AppDelegate.swift */,
 			);
 			path = Strike;
-			sourceTree = "<group>";
-		};
-		027566601D8406F20058CA54 /* StrikeTests */ = {
-			isa = PBXGroup;
-			children = (
-				027566611D8406F20058CA54 /* StrikeTests.swift */,
-				027566631D8406F20058CA54 /* Info.plist */,
-			);
-			path = StrikeTests;
-			sourceTree = "<group>";
-		};
-		0275666B1D8406F20058CA54 /* StrikeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0275666C1D8406F20058CA54 /* StrikeUITests.swift */,
-				0275666E1D8406F20058CA54 /* Info.plist */,
-			);
-			path = StrikeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,18 +171,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Shanee Dahler";
 				TargetAttributes = {
 					027566481D8406F20058CA54 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					0275665C1D8406F20058CA54 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 027566481D8406F20058CA54;
 					};
 					027566671D8406F20058CA54 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 027566481D8406F20058CA54;
 					};
 				};
@@ -277,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				027566621D8406F20058CA54 /* StrikeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0275666D1D8406F20058CA54 /* StrikeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,8 +313,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -384,8 +361,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -404,6 +383,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -417,6 +397,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP2013.Strike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -428,6 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP2013.Strike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -439,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP2013.StrikeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strike.app/Strike";
 			};
 			name = Debug;
@@ -451,6 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP2013.StrikeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strike.app/Strike";
 			};
 			name = Release;
@@ -462,6 +446,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP2013.StrikeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Strike;
 			};
 			name = Debug;
@@ -473,6 +458,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP2013.StrikeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Strike;
 			};
 			name = Release;

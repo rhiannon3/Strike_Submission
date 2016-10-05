@@ -19,48 +19,54 @@ class ViewPlayerName: ViewController {
     @IBOutlet var StartGameButton: UIButton!
     
     override func viewDidLoad() {
-        print(PlayerQty)
-        
-        while PlayerNumber <= PlayerQty {
-            print(PlayerNumber)
-            CreateLabel()
-            CreateTextField()
-            PlayerNumber += 1
-            YFloatPoint += 28
-        }
+        CreatePlayerContentFields()
         
     }
     
-    func CreateLabel() {
-        let label = UILabel(frame: CGRectMake(0,0,200,21))
-        label.center = CGPointMake(87, YFloatPoint)
-        label.textAlignment = NSTextAlignment.Center
+    func CreatePlayerContentFields(){
+        while PlayerNumber <= PlayerQty {
+            print(PlayerNumber)
+           CreateLabel()
+           CreateTextField()
+            PlayerNumber += 1
+            YFloatPoint += 28
+        }
+    }
+    
+   func CreateLabel() {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 87, y: YFloatPoint)
+        label.textAlignment = NSTextAlignment.center
         label.text = "Player \(PlayerNumber):"
-        label.textColor = UIColor.redColor()
+        label.textColor = UIColor.red
         self.view.addSubview(label)
     }
     
     func CreateTextField() {
-        let textField = UITextField(frame: CGRectMake(20, 35, 120, 21))
-        textField.center = CGPointMake(200, YFloatPoint)
-        textField.textAlignment = NSTextAlignment.Left
-        textField.textColor = UIColor.redColor()
-        textField.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.5)
+        let textField = UITextField(frame: CGRect(x: 20, y: 35, width: 120, height: 21))
+        textField.center = CGPoint(x: 200, y: YFloatPoint)
+        textField.textAlignment = NSTextAlignment.left
+        textField.textColor = UIColor.red
+        textField.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         textField.layer.cornerRadius = 5
-        self.ArrayPlayerNames.append(textField)
         self.view.addSubview(textField)
+        self.ArrayPlayerNames.append(textField)
     }
     
-    @IBAction func StartGameButtonPressed(sender: AnyObject) {
-        for textField in ArrayPlayerNames{
-            print(textField.text)
+    @IBAction func StartGameButtonPressed(_ sender: AnyObject) {
+        for playerName in ArrayPlayerNames{
+            print(playerName)
+        }
+    }
+
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "PlayerNamesSegue"){
+        let DestViewController : ViewGameCalculator = segue.destination as! ViewGameCalculator
+        DestViewController.ArrayPlayerNames = ArrayPlayerNames
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let DestViewController : ViewGameCalculator = segue.destinationViewController as! ViewGameCalculator
-        
-        DestViewController.ArrayPlayerNames = ArrayPlayerNames
-    }
     
 }
