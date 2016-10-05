@@ -28,7 +28,7 @@ class ViewGameCalculator: UIViewController {
                 userInput = "Player \(playerCount)"
             }
             playerCount += 1
-            YFloatPoint += 70
+            YFloatPoint += 50
           CreateLabel()
             
         }

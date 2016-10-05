@@ -49,13 +49,15 @@ class ViewPlayerName: ViewController {
         textField.textColor = UIColor.red
         textField.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         textField.layer.cornerRadius = 5
+        textField.layer.borderColor = UIColor.red.cgColor
+        textField.layer.borderWidth = 1
         self.view.addSubview(textField)
         self.ArrayPlayerNames.append(textField)
     }
     
     @IBAction func StartGameButtonPressed(_ sender: AnyObject) {
         for playerName in ArrayPlayerNames{
-            print(playerName)
+            print(playerName.text)
         }
     }
 
