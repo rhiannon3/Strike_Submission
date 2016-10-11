@@ -17,6 +17,7 @@ class ViewPlayerQty: ViewController {
     @IBOutlet var ButtonThreePlayer: UIButton!
     @IBOutlet var ButtonFourPlayer: UIButton!
     @IBOutlet var ButtonFivePlayer: UIButton!
+    @IBOutlet var ButtonSixPlayer: UIButton!
     
     var PlayerQty = Int()
     var LabelText = String()
@@ -43,6 +44,10 @@ class ViewPlayerQty: ViewController {
     
     @IBAction func ButtonFivePressed(_ sender: AnyObject) {
         PlayerQty = 5
+    }
+    
+    @IBAction func ButtonSixPressed(_ sender: AnyObject) {
+        PlayerQty = 6
     }
     
     

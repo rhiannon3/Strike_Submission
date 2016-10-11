@@ -12,9 +12,13 @@ import UIKit
 class ViewPlayerName: ViewController {
     
     var PlayerQty = Int()
-    var YFloatPoint = CGFloat(215)
+    var YFloatPoint = CGFloat(170)
     var PlayerNumber = Int(1)
     var ArrayPlayerNames: [UITextField] = []
+
+    
+    
+    
     
     @IBOutlet var StartGameButton: UIButton!
     
@@ -35,16 +39,17 @@ class ViewPlayerName: ViewController {
     
    func CreateLabel() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        label.center = CGPoint(x: 87, y: YFloatPoint)
+        label.center = CGPoint(x: 130, y: YFloatPoint)
         label.textAlignment = NSTextAlignment.center
         label.text = "Player \(PlayerNumber):"
         label.textColor = UIColor.red
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         self.view.addSubview(label)
     }
     
     func CreateTextField() {
-        let textField = UITextField(frame: CGRect(x: 20, y: 35, width: 120, height: 21))
-        textField.center = CGPoint(x: 200, y: YFloatPoint)
+        let textField = UITextField(frame: CGRect(x: 20, y: 35, width: 100, height: 21))
+        textField.center = CGPoint(x: 220, y: YFloatPoint)
         textField.textAlignment = NSTextAlignment.left
         textField.textColor = UIColor.red
         textField.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
