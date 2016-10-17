@@ -11,7 +11,7 @@
             <objects>
                 <viewController storyboardIdentifier="Main" title="MainMenu" id="BYZ-38-t0r" customClass="ViewController" customModule="Strike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bowling Score Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Ii-q2-7XV">
@@ -410,9 +410,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="clp-ia-cKW"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tWy-Bs-p4Q">
                                 <frame key="frameInset" minX="247" minY="100" width="20" height="20"/>
@@ -428,9 +425,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="kvQ-W0-dAd"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6IF-GI-FFd">
                                 <frame key="frameInset" minX="187" minY="100" width="20" height="20"/>
@@ -447,7 +441,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="jbb-b2-XGJ"/>
+                                    <action selector="onePinDownPressed:" destination="adO-BT-F3I" eventType="touchUpInside" id="Tca-U1-jcM"/>
+                                    <action selector="pinsKnockedDown:" destination="adO-BT-F3I" eventType="touchUpInside" id="ll8-6E-5mH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l9I-Hh-vSk">
@@ -464,9 +459,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="YDp-0d-7ZT"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Api-xn-IDn">
                                 <frame key="frameInset" minX="307" minY="100" width="20" height="20"/>
@@ -482,9 +474,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="izi-i6-1Rr"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fqb-zp-cDL">
                                 <frame key="frameInset" minX="337" minY="100" width="20" height="20"/>
@@ -500,9 +489,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="uGC-HG-NbC"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lbc-TU-90H">
                                 <frame key="frameInset" minX="367" minY="100" width="20" height="20"/>
@@ -518,9 +504,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="vok-mw-Nj8"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Czy-d3-rt0">
                                 <frame key="frameInset" minX="397" minY="100" width="20" height="20"/>
@@ -536,9 +519,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="eSe-ip-zgY"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JnE-Kc-0k5">
                                 <frame key="frameInset" minX="427" minY="100" width="20" height="20"/>
@@ -554,9 +534,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="32t-wC-AeF"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bCX-h1-E5i">
                                 <frame key="frameInset" minX="457" minY="100" width="20" height="20"/>
@@ -572,11 +549,8 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonFivePressed:" destination="hI9-OZ-9ju" eventType="touchUpInside" id="1b6-fX-9g3"/>
-                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1: Frame 1, Roll 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iqL-WK-aAQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iqL-WK-aAQ">
                                 <frame key="frameInset" minX="217" minY="59" width="230" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -595,7 +569,17 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
+                        <outlet property="eightPinDown" destination="Czy-d3-rt0" id="MDS-Xs-OJQ"/>
+                        <outlet property="fivePinDown" destination="Api-xn-IDn" id="7F7-xO-4RF"/>
+                        <outlet property="fourPinDown" destination="l9I-Hh-vSk" id="fPb-hU-XUG"/>
+                        <outlet property="ninePinDown" destination="JnE-Kc-0k5" id="uLE-Ow-1hI"/>
+                        <outlet property="onePinDown" destination="6IF-GI-FFd" id="GQv-cz-HDZ"/>
+                        <outlet property="playInfoLabel" destination="iqL-WK-aAQ" id="YMM-lU-YGp"/>
                         <outlet property="scrollView" destination="Nfe-n5-u1g" id="tIJ-Jg-Fk2"/>
+                        <outlet property="sevenPinDown" destination="lbc-TU-90H" id="cP7-hh-IcU"/>
+                        <outlet property="tenPinDown" destination="bCX-h1-E5i" id="9l5-Gk-5sQ"/>
+                        <outlet property="threePinDown" destination="tWy-Bs-p4Q" id="U33-iS-jFv"/>
+                        <outlet property="twoPinDown" destination="o0L-6a-dK6" id="DSO-QO-fRB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8T-Ne-4p4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -609,7 +593,7 @@
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>

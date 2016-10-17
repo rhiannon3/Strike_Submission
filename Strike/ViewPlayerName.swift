@@ -61,9 +61,9 @@ class ViewPlayerName: ViewController {
     }
     
     @IBAction func StartGameButtonPressed(_ sender: AnyObject) {
-        for playerName in ArrayPlayerNames{
+       /* for playerName in ArrayPlayerNames{
             print(playerName.text)
-        }
+        }*/
     }
 
     

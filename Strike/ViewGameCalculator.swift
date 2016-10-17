@@ -16,16 +16,82 @@ class ViewGameCalculator: UIViewController {
     var userInput = String()
     var playerCount = 1
     var scrollViewContentSize = CGFloat(60)
+    var ArrayGameScore: [frameRolls] = []
+    
+    struct frameRolls {
+        var rollOne: Int
+        var rollTwo: Int
+        
+        init(rollOne: Int, rollTwo: Int) {
+            self.rollOne = rollOne
+            self.rollTwo = rollTwo
+        }
+        
+        func DisplayFramePoint(){
+            print(rollOne + rollTwo)
+        }
+    }
 
     @IBOutlet var scrollView: UIScrollView!
     
+    @IBOutlet var playInfoLabel: UILabel!
+    @IBOutlet var onePinDown: UIButton!
+    @IBOutlet var twoPinDown: UIButton!
+    @IBOutlet var threePinDown: UIButton!
+    @IBOutlet var fourPinDown: UIButton!
+    @IBOutlet var fivePinDown: UIButton!
+    @IBOutlet var sixPinDown: UIButton!
+    @IBOutlet var sevenPinDown: UIButton!
+    @IBOutlet var eightPinDown: UIButton!
+    @IBOutlet var ninePinDown: UIButton!
+    @IBOutlet var tenPinDown: UIButton!
+    
     override func viewDidLoad() {
+        
+        var rollOne = 10
+        var rollTwo = 5
+        
+       /* frameRolls(rollOne: rollOne, rollTwo: rollTwo).DisplayFramePoint()
+        ArrayGameScore.append(frameRolls(rollOne: rollOne, rollTwo: rollTwo))
+        print(ArrayGameScore)*/
+            
+        
         scrollView.contentInset.top = -45
         
         CreateScoreCardLabels()
         
         CreatePlayerLabels()
     }
+    
+    func PlayGame() {
+        
+        var Frames = 0
+        
+        
+        while Frames != 9 {
+        }
+    }
+    
+    func CheckPinsDown(){
+        //let pinsDown = Int
+        
+        
+        
+        
+        
+        
+    }
+    var rollOne = 0
+    
+
+    @IBAction func pinsKnockedDown(_ sender: UIButton) {
+        
+    }
+    
+    
+    
+    
+    
     
     func CreateScoreCardLabels(){
         
@@ -60,11 +126,6 @@ class ViewGameCalculator: UIViewController {
             xPoint += 45
             frameLabelQty += 1
         }
-        /*let frameLabelRect = UIView(frame: CGRect(x: xFrame, y: 0, width: 65, height: 20))
-        frameLabelRect.center = CGPoint(x: xPoint + 10, y: 135)
-        frameLabelRect.layer.borderWidth = 1
-        frameLabelRect.layer.borderColor = UIColor.black.cgColor*/
-        
         CreateFrameRectMain(xFrame: Int(xFrame), yFrame: 0, width: 65, height: 20, xPoint: Int(xPoint + 10), yPoint: 135)
         
         let scoreCardLabel = UILabel(frame: CGRect(x: xFrame, y: 0, width: 65, height: 20))
@@ -75,7 +136,6 @@ class ViewGameCalculator: UIViewController {
         scoreCardLabel.font = UIFont.boldSystemFont(ofSize: 18)
         
         self.view.addSubview(scoreCardLabel)
-        //self.view.addSubview(frameLabelRect)
         
     }
     
