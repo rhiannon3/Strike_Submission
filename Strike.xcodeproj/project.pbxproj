@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02701EDC1DB4C099001A32DA /* scoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02701EDB1DB4C099001A32DA /* scoreCard.swift */; };
 		0275664D1D8406F20058CA54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0275664C1D8406F20058CA54 /* AppDelegate.swift */; };
 		0275664F1D8406F20058CA54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0275664E1D8406F20058CA54 /* ViewController.swift */; };
 		027566521D8406F20058CA54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027566501D8406F20058CA54 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02701EDB1DB4C099001A32DA /* scoreCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scoreCard.swift; sourceTree = "<group>"; };
 		027566491D8406F20058CA54 /* Strike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0275664C1D8406F20058CA54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0275664E1D8406F20058CA54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				027566551D8406F20058CA54 /* LaunchScreen.storyboard */,
 				027566581D8406F20058CA54 /* Info.plist */,
 				0275664C1D8406F20058CA54 /* AppDelegate.swift */,
+				02701EDB1DB4C099001A32DA /* scoreCard.swift */,
 			);
 			path = Strike;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				028002671D91514E002EEDC2 /* ViewPlayerName.swift in Sources */,
 				0275664F1D8406F20058CA54 /* ViewController.swift in Sources */,
 				0275664D1D8406F20058CA54 /* AppDelegate.swift in Sources */,
+				02701EDC1DB4C099001A32DA /* scoreCard.swift in Sources */,
 				028002651D915067002EEDC2 /* ViewPlayerQty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

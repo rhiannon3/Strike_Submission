@@ -9,14 +9,17 @@
 import Foundation
 import UIKit
 
+
 class ViewGameCalculator: UIViewController {
     
     var ArrayPlayerNames: [UITextField] = []
+    var ArrayPlayerNamesStr: [String] = []
     var YFloatPoint = CGFloat(20)
-    var userInput = String()
     var playerCount = 1
     var scrollViewContentSize = CGFloat(60)
     var ArrayGameScore: [frameRolls] = []
+    var ArrayOfRolls: [Int] = []
+    var Rolls = 21
     
     struct frameRolls {
         var rollOne: Int
@@ -33,7 +36,6 @@ class ViewGameCalculator: UIViewController {
     }
 
     @IBOutlet var scrollView: UIScrollView!
-    
     @IBOutlet var playInfoLabel: UILabel!
     @IBOutlet var onePinDown: UIButton!
     @IBOutlet var twoPinDown: UIButton!
@@ -46,175 +48,49 @@ class ViewGameCalculator: UIViewController {
     @IBOutlet var ninePinDown: UIButton!
     @IBOutlet var tenPinDown: UIButton!
     
+    var currentScore = 0
+    var buttonPress = false
+    
+    
     override func viewDidLoad() {
-        
-        var rollOne = 10
-        var rollTwo = 5
-        
-       /* frameRolls(rollOne: rollOne, rollTwo: rollTwo).DisplayFramePoint()
-        ArrayGameScore.append(frameRolls(rollOne: rollOne, rollTwo: rollTwo))
-        print(ArrayGameScore)*/
-            
-        
         scrollView.contentInset.top = -45
-        
-        CreateScoreCardLabels()
-        
+        scoreCard().CreateScoreCardLabels(view: view)
         CreatePlayerLabels()
     }
     
-    func PlayGame() {
-        
-        var Frames = 0
-        
-        
-        while Frames != 9 {
-        }
-    }
-    
-    func CheckPinsDown(){
-        //let pinsDown = Int
-        
-        
-        
-        
-        
+    func CheckScore(pinsDown: Int) {
+        print(currentScore)
         
     }
-    var rollOne = 0
     
 
     @IBAction func pinsKnockedDown(_ sender: UIButton) {
-        
+        currentScore = sender.tag
+        CheckScore(pinsDown: currentScore)
     }
     
-    
-    
-    
-    
-    
-    func CreateScoreCardLabels(){
-        
-        var frameLabelQty = 0
-        var xFrame = CGFloat(135)
-        var xPoint = CGFloat(135)
-        
-        let label = UILabel(frame: CGRect(x: 0,y: 0,width: 70, height: 20))
-        label.center = CGPoint(x: 70, y: 135)
-        label.textAlignment = NSTextAlignment.center
-        label.text = "Names"
-        label.textColor = UIColor.red
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        self.view.addSubview(label)
-        
-        CreateFrameRectMain(xFrame: 70, yFrame: 0, width: 85, height: 20, xPoint: 70, yPoint: 135)
-        
-        self.view.addSubview(label)
-        
-        while frameLabelQty != 9 {
-            CreateFrameRectMain(xFrame: Int(xFrame), yFrame: 0, width: 45, height: 20, xPoint: Int(xPoint), yPoint: 135)
-            
-            let scoreCardLabel = UILabel(frame: CGRect(x: xFrame, y: 0, width: 45, height: 20))
-            scoreCardLabel.center = CGPoint(x: xPoint, y: 135)
-            scoreCardLabel.textAlignment = NSTextAlignment.center
-            scoreCardLabel.text = "\(frameLabelQty + 1)"
-            scoreCardLabel.textColor = UIColor.red
-            scoreCardLabel.font = UIFont.boldSystemFont(ofSize: 18)
-            
-           self.view.addSubview(scoreCardLabel)
-            xFrame += 46
-            xPoint += 45
-            frameLabelQty += 1
-        }
-        CreateFrameRectMain(xFrame: Int(xFrame), yFrame: 0, width: 65, height: 20, xPoint: Int(xPoint + 10), yPoint: 135)
-        
-        let scoreCardLabel = UILabel(frame: CGRect(x: xFrame, y: 0, width: 65, height: 20))
-        scoreCardLabel.center = CGPoint(x: xPoint + 10, y: 135)
-        scoreCardLabel.textAlignment = NSTextAlignment.center
-        scoreCardLabel.text = "\(frameLabelQty + 1)"
-        scoreCardLabel.textColor = UIColor.red
-        scoreCardLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        
-        self.view.addSubview(scoreCardLabel)
-        
-    }
     
     func CreatePlayerLabels(){
         for textField in ArrayPlayerNames {
-            userInput = textField.text!
+            var userInput = textField.text!
             if userInput == "" {
                 userInput = "Player \(playerCount)"
             }
+            self.ArrayPlayerNamesStr.append(userInput)
             playerCount += 1
+        }
+        for name in ArrayPlayerNamesStr{
             YFloatPoint += 40
-            CreateLabel()
-            CreateScoreCard()
+            scrollViewContentSize += 45
+            scrollView.contentSize = CGSize(width: 200, height:scrollViewContentSize)
+            scoreCard().CreateNameLabels(name: name, YFloatPoint: YFloatPoint, view: scrollView)
+            scoreCard().CreateScoreCard(view: scrollView, YFloatPoint: YFloatPoint)
+            print(name)
         }
     }
     
-  func CreateLabel() {
-    let label = UILabel(frame: CGRect(x: 0,y: 0,width: 70, height: 20))
-        label.center = CGPoint(x: 70, y: YFloatPoint)
-        label.textAlignment = NSTextAlignment.right
-        label.text = "\(userInput):"
-        label.textColor = UIColor.red
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-    
-        scrollView.addSubview(label)
-        scrollViewContentSize += 45
-        scrollView.contentSize = CGSize(width: 200, height:scrollViewContentSize)
         
-    }
-    
-    func CreateScoreCard(){
-        var frameQty = 0
-        var xFrame = CGFloat(135)
-        var xPoint = CGFloat(135)
-        var frameRoll = 0
-        var xPointRoll = CGFloat(135)
-        
-        CreateFrameRect(xFrame: 70, yFrame: 0, width: 85, height: 40, xPoint: 70, yPoint: Int(YFloatPoint + 10))
-        
-        while frameQty != 9 {
-            CreateFrameRect(xFrame: Int(xFrame), yFrame: 0, width: 45, height: 40, xPoint: Int(xPoint), yPoint: Int(YFloatPoint + 10))
-    
-            while frameRoll != 2{
-                CreateFrameRect(xFrame: Int(xFrame - 2.5), yFrame: 0, width: 20, height: 20, xPoint: Int(xPointRoll - 7.5), yPoint: Int(YFloatPoint))
-                frameRoll += 1
-                xPointRoll += 20
-            }
-            xPointRoll += 5
-            frameRoll = 0
-            xFrame += 46
-            xPoint += 45
-            frameQty += 1
-        }
-        
-        CreateFrameRect(xFrame: Int(xFrame), yFrame: 0, width: 65, height: 40, xPoint: Int(xPoint + 10), yPoint: Int(YFloatPoint + 10))
-        
-        while frameRoll != 3{
-            CreateFrameRect(xFrame: Int(xFrame - 2.5), yFrame: Int(YFloatPoint), width: 20, height: 20, xPoint: Int(xPointRoll - 7.5), yPoint: Int(YFloatPoint))
-            frameRoll += 1
-            xPointRoll += 20
-        }
-        
-    }
-    
-    func CreateFrameRect(xFrame: Int, yFrame: Int, width: Int, height: Int, xPoint: Int, yPoint: Int){
-        let frameRect = UIView(frame: CGRect(x: xFrame, y: yFrame, width: width, height: height))
-        frameRect.center = CGPoint(x: xPoint, y: yPoint)
-        frameRect.layer.borderWidth = 1
-        frameRect.layer.borderColor = UIColor.black.cgColor
-        scrollView.addSubview(frameRect)
-    }
-    
-    func CreateFrameRectMain(xFrame: Int, yFrame: Int, width: Int, height: Int, xPoint: Int, yPoint: Int){
-        let frameRect = UIView(frame: CGRect(x: xFrame, y: yFrame, width: width, height: height))
-        frameRect.center = CGPoint(x: xPoint, y: yPoint)
-        frameRect.layer.borderWidth = 1
-        frameRect.layer.borderColor = UIColor.black.cgColor
-        self.view.addSubview(frameRect)
-    }
 }
+
 
 

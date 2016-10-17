@@ -14,6 +14,7 @@ class ViewPlayerName: ViewController {
     var PlayerQty = Int()
     var YFloatPoint = CGFloat(170)
     var PlayerNumber = Int(1)
+    var ArrayPlayerName: [String] = []
     var ArrayPlayerNames: [UITextField] = []
 
     
@@ -58,6 +59,7 @@ class ViewPlayerName: ViewController {
         textField.layer.borderWidth = 1
         self.view.addSubview(textField)
         self.ArrayPlayerNames.append(textField)
+        
     }
     
     @IBAction func StartGameButtonPressed(_ sender: AnyObject) {
