@@ -111,6 +111,16 @@ public class scoreCard{
         view.addSubview(scoreCardLabel)
         
     }
+    
+    func displayScoreInput(xFrame: Int, yFrame: Int, rollScore: String, view: UIView) {
+        let label = UILabel(frame: CGRect(x: 0,y: 0,width: 60, height: 20))
+        label.center = CGPoint(x: xFrame, y: yFrame)
+        label.textAlignment = NSTextAlignment.center
+        label.text = "\(rollScore)"
+        label.textColor = UIColor.red
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        view.addSubview(label)
+    }
 
 }
-    
+
