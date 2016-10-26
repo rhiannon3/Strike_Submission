@@ -177,9 +177,6 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="NOe-rA-Ogw" kind="modal" id="gQl-l0-WEm"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="If you don't have an account:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="none" adjustsFontSizeToFit="NO" id="7eA-bD-cCa">
                                 <frame key="frameInset" minX="369" minY="265" width="140" height="41"/>
@@ -195,32 +192,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIn-Nu-Dj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1427.5" y="-912.5"/>
-        </scene>
-        <!--Register-->
-        <scene sceneID="SGZ-V3-bXH">
-            <objects>
-                <viewController title="Register" id="NOe-rA-Ogw" customClass="RegisterViewController" customModule="Strike" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4kU-jc-uB4">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6vy-y9-ms0">
-                                <frame key="frameInset" minX="191" minY="97" width="284" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="100"/>
-                                <state key="normal" title="dick"/>
-                                <connections>
-                                    <segue destination="6IY-8V-Qqt" kind="modal" id="7kG-DK-3NQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="NCw-Ea-AD6"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dh0-4u-tP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-631.5" y="-911.5"/>
         </scene>
         <!--PlayerQty-->
         <scene sceneID="JoG-yo-M6V">
